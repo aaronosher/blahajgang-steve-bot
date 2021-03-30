@@ -25,10 +25,7 @@ client.once("ready", async () => {
     .getApplicationCommands("825807863146479657")
     .then((commands) =>
       commands.forEach((command) => {
-        interaction
-          .deleteApplicationCommand(command.id)
-          .then(console.log)
-          .catch(console.error);
+        interaction.deleteApplicationCommand(command.id).catch(console.error);
       })
     )
     .catch(console.error);
@@ -47,7 +44,6 @@ client.once("ready", async () => {
 
   await interaction
     .createApplicationCommand(command, "825807863146479657")
-    .then(console.log)
     .catch(console.error);
 
   client.ws.on("INTERACTION_CREATE", async (interaction) => {
@@ -84,6 +80,12 @@ client.on("message", (message) => {
   if (message.mentions.has(client.user.id)) {
     message.reply("I am here, yes. :pick:");
   }
+});
+
+client.on("guildMemberAdd", (member) => {
+  client.channels.fetch("825807863661592628").then((channel) => {
+    channel.send(`OMG Hi <@${member.user.id}> :wave:`);
+  });
 });
 
 client.login(process.env.BOT_TOKEN);
