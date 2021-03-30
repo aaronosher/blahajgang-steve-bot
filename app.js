@@ -1,6 +1,7 @@
 require("dotenv").config();
 const fetch = require("node-fetch");
 const Discord = require("discord.js");
+const express = require("express");
 const {
   DiscordInteractions,
   ApplicationCommandOptionType,
@@ -86,3 +87,15 @@ client.on("message", (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
+
+const app = express();
+
+app.get("/", (_req, res) =>
+  res.send(
+    "You found the Blahajgang MC Whitelist API. You probably want blahajgang.lol"
+  )
+);
+
+app.listen(3000, () => {
+  console.log("App listening on port 3000");
+});
