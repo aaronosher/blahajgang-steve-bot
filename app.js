@@ -84,7 +84,7 @@ client.on("message", (message) => {
 
 client.on("guildMemberAdd", (member) => {
   client.channels.fetch("825807863661592628").then((channel) => {
-    channel.send(`OMG Hi <@${member.user.id}> :wave:`);
+    channel.send(`OMG Hi <@${member.user.id}> :wave: \n-You can get more roles in #opt-into-channels-fam !\n-Buy a blahaj at https://hackp.ac/blahaj or check out knockoffs in #important-links-to-support-our-cult-i-mean-community ! \n-Check out our lore at #the-lore-of-blahajgang !\nHope you have fun here! :)`);
   });
 });
 
