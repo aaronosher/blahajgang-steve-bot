@@ -14,6 +14,10 @@ const interaction = new DiscordInteractions({
   publicKey: process.env.PUBLIC_KEY,
 });
 
+const optChannelId = 855258040830525491;
+const importantChannelId = 862418328790499341;
+const loreChannelId = 858776930031108097;
+
 client.once("ready", async () => {
   console.log("Ready!");
 
@@ -84,7 +88,7 @@ client.on("message", (message) => {
 
 client.on("guildMemberAdd", (member) => {
   client.channels.fetch("825807863661592628").then((channel) => {
-    channel.send(`OMG Hi <@${member.user.id}> :wave: \n-You can get more roles in #opt-into-channels-fam !\n-Buy a blahaj at https://hackp.ac/blahaj or check out knockoffs in #important-links-to-support-our-cult-i-mean-community ! \n-Check out our lore at #the-lore-of-blahajgang !\nHope you have fun here! :)`);
+    channel.send(`OMG Hi <@${member.user.id}> :wave: \n-You can get more roles in <#${optChannelId}>!\n-Buy a blahaj at https://hackp.ac/blahaj or check out knockoffs in <#${importantChannelId}! \n-Check out our lore at <#${loreChannelId}>!\nHope you have fun here! :)`);
   });
 });
 
