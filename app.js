@@ -89,7 +89,7 @@ client.on("message", (message) => {
 
 client.on("guildMemberAdd", (member) => {
   client.channels.fetch("825807863661592628").then((channel) => {
-    channel.send(`OMG Hi <@${member.user.id}> :wave: \n-You can get more roles in <#855258040830525491>!\n-Buy a blahaj at https://hackp.ac/blahaj or check out knockoffs in <#862418328790499341>! \n-Check out our lore at <#858776930031108097>!\n-Lastly, you can check out cool hackathons, events, internships, and other opportunities over in <#842600967089815562>!\nHope you have fun here! :)`);
+    channel.send(`OMG Hi <@${member.user.id}> :wave: \n-You can get more roles in <#855258040830525491>!\n-Buy a blahaj at https://hackp.ac/blahaj or check out knockoffs in <#862418328790499341>! \n-Check out our lore at <#858776930031108097>!\nCheck out #SaveBLAHAJ on Twitter </3\n-Lastly, you can check out cool hackathons, events, internships, and other opportunities over in <#842600967089815562>!\nHope you have fun here! :)`);
   });
 });
 
